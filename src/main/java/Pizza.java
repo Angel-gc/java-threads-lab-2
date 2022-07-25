@@ -17,6 +17,9 @@ public class Pizza {
 
       for (Thread step : cookingSteps) {
           step.start();
+          if (step == tomatoes){
+              step.join();
+          }
       }
   }
 
